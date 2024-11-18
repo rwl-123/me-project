@@ -125,27 +125,30 @@
       <!-- end header -->
       <!-- inner page banner -->
       <section class="innerpage_banner">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="full">
-                     <div class="page_title">
-                        <div class="full heading_s1">
-                           <h2><span>Dogs for Adoption</span></h2>
-						   
-						 </div>
-<div class="text-container">
-    <div class="text-line">
-        Adoption offers dogs a second chance at happiness. Whether you're looking for a playful puppy or a calm senior dog, adoption allows you to find a companion that fits your lifestyle. Let's raise awareness about the benefits of adopting dogs and help these wonderful animals find their forever homes, giving them the warmth and love they long for.
-    </div>
-    <a href="#" class="read-more">[Read More]</Read></a>
-</div>
-                     </div>
-					
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="full">
+                          <div class="page_title">
+                              <div class="full heading_s1">
+                                  <h2><span>Dogs for Adoption</span></h2>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-               </div>
-            </div>
-         </div>
+                  
+                 <!-- 对齐文本部分 -->
+                 <div class="col-sm-12">
+                     <div class="text-container">
+                         <div class="text-line" id="text-content">
+                             Adoption offers dogs a second chance at happiness. Whether you're looking for a playful puppy or a calm senior dog, adoption allows you to find a companion that fits your lifestyle. Let's raise awareness about the benefits of adopting dogs and help these wonderful animals find their forever homes, giving them the warmth and love they long for.
+                         </div>
+                         <a href="#" id="toggle-button" class="read-more">Read More</a>
+                     </div>
+                 </div> 
+      
+              </div>
+          </div>
       </section>
       <!-- end inner page banner -->
       <!-- pets family section -->
@@ -540,22 +543,25 @@
 	  
 	  <!-- 显示点击read more-- -->
 			<script>
-	      document.querySelector('.read-more').addEventListener('click', function (e) {
-	          e.preventDefault(); // 防止默认的链接跳转行为
-	          const textLine = document.querySelector('.text-line');
-	          const readMoreButton = document.querySelector('.read-more');
-	  
-	          // 切换文本显示状态
-	          textLine.classList.toggle('full-text');
-	  
-	          // 根据是否展开，修改按钮文本
-	          if (textLine.classList.contains('full-text')) {
-	              readMoreButton.textContent = 'Read Less'; // 显示 "Read Less"
-	          } else {
-	              readMoreButton.textContent = 'Read More'; // 显示 "Read More"
-	          }
-	      });
-	  </script>
+			    document.getElementById('toggle-button').addEventListener('click', function (e) {
+			        e.preventDefault();
+			        const textContent = document.getElementById('text-content');
+			        const toggleButton = document.getElementById('toggle-button');
+			
+			        // 切换文本的 max-height
+			        if (textContent.classList.contains('full-text')) {
+			            // 当前是展开状态，切换为收起
+			            textContent.style.maxHeight = '4.5em'; 
+			            textContent.classList.remove('full-text');
+			            toggleButton.textContent = 'Read More';
+			        } else {
+			            // 当前是收起状态，切换为展开
+			            textContent.style.maxHeight = 'none'; 
+			            textContent.classList.add('full-text');
+			            toggleButton.textContent = 'Read Less';
+			        }
+			    });
+			</script>
 	  
 	  
 	 

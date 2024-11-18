@@ -4164,63 +4164,52 @@ form#commant_form div.field textarea.custom_field {
 
 /* styles.css */
 
-
+   .text-container {
+          width: 100%;
+          max-width: 400px; /* 限制容器宽度为400px */
+          margin: auto;
+          padding: 10px;
+          background-color: #f9f9f9;
+          border: 1px solid #ccc;
+          text-align: left; /* 确保容器内文本左对齐 */
+		  float: left;
+		 
+      }
+  
+      .text-line {
+          font-size: 14px; /* 调整字体大小，减少每行字符数 */
+          color: #333;
+          line-height: 1.5;
+          max-height: 4.5em; /* 初始显示3行高度 */
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out, color 0.3s;
+          text-align: left; /* 强制文本左对齐 */
+          word-wrap: break-word; /* 确保长单词会换行 */
+		  
+      }
  
-     .text-container {
-
-				width: 100%; /* 容器宽度为100%，适应屏幕宽度 */
-			    max-width: 600px; /* 最大宽度600px，防止过大 */
-				margin: auto;
-			    margin-left: 0; /* 设置左边距为0，容器靠左显示 */
-			    padding: 5px; /* 添加内边距，避免文本紧贴容器边缘 */
-                 
-             }
-     
-             .text-line {
-                 display: -webkit-box;
-                 -webkit-box-orient: vertical;
-                 overflow: hidden;
-                 -webkit-line-clamp: 3; /* 限制文本显示为3行 */
-                 line-height: 1.5em; /* 设置行高 */
-                 max-height: 4.5em; /* 确保最大高度为3行的高度 (3行 * 1.5行高) */
-                 transition: max-height 0.3s ease-in-out; /* 增加平滑过渡效果 */
-				 font-size: 18px; /* 增大字体大小，提升每行字数 */
-				 color: #333333; /* 设置字体颜色 */
-				  text-align: left; /* 强制左对齐文本 */
-             }
-     
-             .read-more {
-                 display: inline-block;
-                 margin-top: 10px;
-                 color: #333333;
-                 text-decoration: none;
-                 cursor: pointer;
-             }
-     
-             .read-more:hover {
-                 text-decoration: underline;
-             }
-     
-             /* 点击后显示全部内容 */
-             .text-line.full-text {
-                 -webkit-line-clamp: unset; /* 移除行限制，显示完整文本 */
-                 max-height: unset;
-             }
-			 
-			 
-			 /* 设置 Flexbox 布局，确保信息分成 5 列显示 */
-			         .pet_info_wrapper {
-			             display: flex;
-			             flex-wrap: wrap; /* 换行显示 */
-			             gap: 10px; /* 每个项目之间的间距 */
-			         }
-			 /* 每条信息项的样式 */
-			         .pet_info {
-			             flex: 1 1 20%; /* 每个项占 20% 宽度，使 5 项放在一行 */
-			             font-size: 16px;
-			             color: #555;
-			             margin-bottom: 10px; /* 每个信息项的下边距 */
-						 text-align: left; /* 强制左对齐文本 */
-			         }
-					 
-				  
+     .read-more {
+         display: inline-flex;
+         align-items: center;
+         margin-top: 10px;
+         color: #333;
+         text-decoration: none;
+         cursor: pointer;
+         font-weight: bold;
+         transition: color 0.3s;
+     }
+ 
+     .read-more:hover {
+         color: #007BFF;
+         text-decoration: underline;
+     }
+ 
+     .read-more::after {
+         content: ' ▼';
+         transition: transform 0.3s;
+     }
+ 
+     .text-line.full-text + .read-more::after {
+         content: ' ▲';
+     }
+ </style>s
