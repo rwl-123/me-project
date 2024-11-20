@@ -101,22 +101,22 @@
                            </div>
                         </nav>
                      </div>
-                    <div class="search_bar">
-                        <form action="index.html" method="get" onsubmit="return false;">
-                            <input type="text" class="search_field" placeholder="Dogs for Adoption" required="">
-                            <button class="search_button" type="button" onclick="redirectToPage()">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </form>
-                    </div>
-                    
-                    <script>
-                        function redirectToPage() {
-                            var searchQuery = document.querySelector('.search_field').value;
-                            var newUrl = 'adopt_gallery.html?q=' + encodeURIComponent(searchQuery);
-                            window.location.href = newUrl;
-                        }
-                    </script>
+                     <div class="search_bar">
+                         <form action="index.html" method="get" onsubmit="return false;">
+                             <input type="text" class="search_field" placeholder="Dogs for Adoption" required="">
+                             <button class="search_button" type="button" onclick="redirectToPage()">
+                                 <i class="fa fa-search"></i>
+                             </button>
+                         </form>
+                     </div>
+                     
+                     <script>
+                         function redirectToPage() {
+                             var searchQuery = document.querySelector('.search_field').value;
+                             var newUrl = 'adopt_gallery.html?q=' + encodeURIComponent(searchQuery);
+                             window.location.href = newUrl;
+                         }
+                     </script>
                   </div>
                </div>
             </div>
@@ -125,398 +125,481 @@
       <!-- end header -->
       <!-- inner page banner -->
       <section class="innerpage_banner">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="full">
-                     <div class="page_title">
-                        <div class="full heading_s1">
-                           <h2><span>Dogs for Sale</span></h2>
-						   
-						 </div>
-<div class="text-container">
-    <div class="text-line">
-        Adoption offers dogs a second chance at happiness. Whether you're looking for a playful puppy or a calm senior dog, adoption allows you to find a companion that fits your lifestyle. Let's raise awareness about the benefits of adopting dogs and help these wonderful animals find their forever homes, giving them the warmth and love they long for.
-    </div>
-    <a href="#" class="read-more">[Read More]</a>
-</div>
-                     </div>
-					
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="full">
+                          <div class="page_title">
+                              <div class="full heading_s1">
+                                  <h2><span>Dogs for Sale</span></h2>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-               </div>
-            </div>
-         </div>
+                  
+                 <!-- 对齐文本部分 -->
+                 <div class="col-sm-12">
+                     <div class="text-container">
+                         <div class="text-line" id="text-content">
+                           You can easily browse through a wide selection of dogs and puppies for sale. Explore specific breeds, review their traits, and compare options to ensure that your new furry friend will be a great match for your home environment and lifestyle. Take the next step in your journey to pet ownership with confidence, and let us help you find a loyal companion that’s just right for you.
+						
+						 </div>
+                         <a href="#" id="toggle-button" class="read-more">Read More</a>
+                     </div>
+                 </div> 
+      
+              </div>
+          </div>
       </section>
       <!-- end inner page banner -->
+	  
+	  <!-- 链接 -->
+	<div class="container">
+	  <div class="row">
+	    <div class="col-md-12">
+	      <a href="adopt_gallery.html">
+	        <div class="zzz_s2 margin_bottom_50">
+	          <img class="imgss" src="static/adopt_pic/right_arrow.png" alt="#">
+	          <h3>  
+	            <span>Dogs To Adopt Near Me</span>
+	          </h3>
+	        </div>
+	      </a>
+	      <a href="sale_gallery.html">
+	        <div class="zzz_s2 margin_bottom_50">
+	          <img class="imgss" src="static/adopt_pic/right_arrow.png" alt="#">
+	          <h3>  
+	            <span>Cheap Puppies for Sale</span>
+	          </h3>
+	        </div>
+	      </a>
+		  <a href="pet_details2.html">
+		    <div class="zzz_s2 margin_bottom_50">
+		      <img class="imgss" src="static/adopt_pic/right_arrow.png" alt="#">
+		      <h3>  
+		        <span>Best Small Dog Breeds For Kids</span>
+		      </h3>
+		    </div>
+		  </a>
+		  <a href="sale_gallery.html">
+		    <div class="zzz_s2 margin_bottom_50">
+		      <img class="imgss" src="static/adopt_pic/right_arrow.png" alt="#">
+		      <h3>  
+		        <span>Cheap Puppies for Sale</span>
+		      </h3>
+		    </div>
+		  </a>
+	    </div>
+	  </div>
+	  <style>
+	    .imgss {
+	      width: 40px;           /* 设置图片宽度 */
+	      height: auto;          /* 保持图片宽高比例 */
+	      display: inline-block; /* 保持默认的内联块状，方便左对齐 */
+	      margin-right: 10px;    /* 图片和标题间的间距 */
+	      vertical-align: middle; /* 垂直对齐文字的中线 */
+	    }
+	    .zzz_s2 {
+	      display: flex;              /* 使用 Flexbox 布局 */
+	      align-items: center;        /* 图片和标题垂直居中对齐 */
+	      padding: 5px;              /* 减小内边距以减少容器高度 */
+	      margin: 0 auto 15px auto;   /* 居中对齐，顶部和底部有间距 */
+	      max-width: 500px;           /* 设置容器最大宽度为 500px */
+	      border: 2px solid #ccc;     /* 添加边框并设置颜色 */
+	      border-radius: 15px;        /* 设置四角为 15px 的圆角 */
+	      background-color: #f9f9f9;  /* 设置背景色 */
+	      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+	    }
+	    .zzz_s2 h3 {
+	      margin: 0;             /* 去掉标题的默认外边距 */
+	      font-size: 16px;       /* 标题字体大小 */
+	      font-weight: bold;     /* 加粗标题 */
+	    }
+	    .zzz_s2:hover {
+	      background-color: #eaeaea;  /* 鼠标悬停时的背景色 */
+	      border-color: #999;         /* 鼠标悬停时的边框颜色 */
+	    }
+	  </style>
+	</div>
+	 <!-- end链链接 -->
+	 
       <!-- pets family section -->
       <section class="layout_padding white_bg pets_information_section">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="full heading_s2 text_align_center margin_bottom_50">
-                     <h2><img src="static/picture/icon_head.png" alt="#"><br><span>Dogs Adoption Near Me</span></h2>
-                  </div>
-               </div>
+        <div class="container">
+			 <div class="row">
+            <div class="col-md-12">
+              <div class="full heading_s2 text_align_center margin_bottom_50">
+                <h2><img src="static/picture/icon_head.png" alt="#"><br><span>Dogs for Sale in Your Area</span></h2>
+              </div> 
             </div>
-            <div class="row">
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/p1.jpg" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Charlie</h3>
-                           <h4 class="pet_price">Mixed Breed</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: Young</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/p2.jpg" alt="#">
-                        <div class="overview_search"><a href="pet_details1.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Mia</h3>
-                           <h4 class="pet_price">Cattle Dog</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Female</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: Adult</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/pt3.png" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Flummy</h3>
-                           <h4 class="pet_price">Price : $2,998</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: 2 years</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/pt4.png" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Tom</h3>
-                           <h4 class="pet_price">Price : $2,998</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: 2 years</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/pt5.png" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Bobby</h3>
-                           <h4 class="pet_price">Price : $2,998</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: 2 years</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/pt6.png" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Whitty</h3>
-                           <h4 class="pet_price">Price : $2,998</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: 2 years</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/pt1.png" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Tommy</h3>
-                           <h4 class="pet_price">Price : $2,998</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: 2 years</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/pt2.png" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Charlie</h3>
-                           <h4 class="pet_price">Price : $2,998</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: 2 years</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/pt3.png" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Flummy</h3>
-                           <h4 class="pet_price">Price : $2,998</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: 2 years</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/pt4.png" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Tom</h3>
-                           <h4 class="pet_price">Price : $2,998</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: 2 years</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/pt5.png" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Bobby</h3>
-                           <h4 class="pet_price">Price : $2,998</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: 2 years</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <!-- pets inform --> 
-                  <div class="pet_info">
-                     <div class="pet_img">
-                        <img class="img-responsive" src="static/picture/pt6.png" alt="#">
-                        <div class="overview_search"><a href="pet_details.html"><i class="fa fa-search"></i></a></div>
-                     </div>
-                     <div class="petinfo">
-                        <div class="pet_infotop">
-                           <h3 class="pet_name">Whitty</h3>
-                           <h4 class="pet_price">Price : $2,998</h4>
-                        </div>
-                        <div class="pet_infobottom">
-                           <ul>
-                              <li>Gender: Male</li>
-                              <li>Neutered: Yes</li>
-                              <li>Age: 2 years</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- end pets inform -->
-               </div>
-               <div class="col-sm-12">
-                  <div class="readmore_bt center margin_top_20">
-                     <a class="main_bt read_more_bt" href="">See More ></a>
-                  </div>
-               </div>
-            </div>
-         </div>
+          </div>
+          
+          <div class="row" id="pet-info-container">
+            <!-- 第1页宠物信息 -->
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pet-info-page" data-page="1">
+                          <div class="pet_info">
+                                 <div class="pet_img" >
+                                    <img class="img-responsive" src="static/adopt_pic/p1.jpg" alt="#">
+                                   <div class="overview_search"><a href="saledog_details1.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Charlie</h3>
+                                       <h4 class="pet_price">price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Male</li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Young</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p2.jpg" alt="#">
+                                    <div class="overview_search"><a href="pet_details2.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Mia</h3>
+                                       <h4 class="pet_price">price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Female</li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Adult</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p3.jpg" alt="#">
+                                    <div class="overview_search"><a href="pet_details3.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Regina</h3>
+                                       <h4 class="pet_price">price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Male</li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Senior</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p4.jpg" alt="#">
+                                    <div class="overview_search"><a href="pet_details4.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Brita</h3>
+                                       <h4 class="pet_price">price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Female</li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Adult</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p5.jpg" alt="#">
+                                    <div class="overview_search"><a href="pet_details5.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Rita</h3>
+                                       <h4 class="pet_price">price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Female </li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Puppy</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p6.jpeg" alt="#">
+                                    <div class="overview_search"><a href="pet_details6.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Tita Lina</h3>
+                                       <h4 class="pet_price">price </h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Female </li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Puppy</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p7.jpeg" alt="#">
+                                    <div class="overview_search"><a href="pet_details7.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Tony</h3>
+                                       <h4 class="pet_price">price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Male</li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Adult</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info" id="pet-1">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p8.jpg" alt="#">
+                                    <div class="overview_search"><a href="pet_details8.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Luigi</h3>
+                                       <h4 class="pet_price">price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Male</li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Adult</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p9.jpg" alt="#">
+                                    <div class="overview_search"><a href="pet_details9.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Morty</h3>
+                                       <h4 class="pet_price">price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Male</li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Senior</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p10.jpg" alt="#">
+                                    <div class="overview_search"><a href="pet_details10.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Moose</h3>
+                                       <h4 class="pet_price">price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Male</li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Adult</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p11.jpg" alt="#">
+                                    <div class="overview_search"><a href="pet_details11.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Orio</h3>
+                                       <h4 class="pet_price"> price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Male</li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Young</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end pets inform -->
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                              <!-- pets inform --> 
+                              <div class="pet_info">
+                                 <div class="pet_img">
+                                    <img class="img-responsive" src="static/adopt_pic/p12.jpeg" alt="#">
+                                    <div class="overview_search"><a href="pet_details12.html"><i class="fa fa-search"></i></a></div>
+                                 </div>
+                                 <div class="petinfo">
+                                    <div class="pet_infotop">
+                                       <h3 class="pet_name">Cafesita</h3>
+                                       <h4 class="pet_price">price</h4>
+                                    </div>
+                                    <div class="pet_infobottom">
+                                       <ul>
+                                          <li>Female</li>
+                                          <li>Neutered: Yes</li>
+                                          <li>Age: Young</li>
+                                       </ul>
+                                    </div>
+									
+                                 </div>
+                              </div>				  
+      	</div>
+		<!-- 添加更多分页 -->
+          <div class="col-sm-12">
+                <div class="pagination center margin_top_30">
+				   <a class="page-link read_more_bt" href="adopt_gallery.html">1</a>
+                   <a class="page-link read_more_bt" href="adopt_gallery2.html">2</a>
+				   <a class="page-link read_more_bt" href="adopt_gallery3.html">3</a>
+				   <a class="page-link read_more_bt" href="adopt_gallery4.html">4</a>
+				   <a class="page-link read_more_bt" href="adopt_gallery5.html">5</a>
+				   <a class="page-link read_more_bt" href="adopt_gallery6.html">6</a>
+				   <a class="page-link read_more_bt" href="adopt_gallery.html">》</a>
+				   
+                  <!-- 可以根据需要继续添加更多分页 -->
+                </div>
+              </div>
       </section>
       <!-- end pets family section -->
       
      
       <!-- footer -->
-      <style>
-              /* 调整 footer 内边距 */
-              .footer {
-                  padding-top: 0px;   /* 上边距 */
-                  padding-bottom: 10px; /* 下边距 */
-              }
-      			  .footer_logo {
-      			              margin-top: 60px;  /* 调整此值来控制 logo 距离顶部的距离 */
-      			          }
-          </style>
-           <footer class="footer layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4 col-sm-12">
-                  <div class="footer_blog1">
-                     <div class="footer_logo"><a href="index.html"><img src="static/picture/logo_white.png" alt="#"></a></div>
-                     
-                     <div class="footer_social_icon">
-                        <ul>
-                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-12">
-                  <div class="footer_link_heading">
-                     <h3>Useful Links</h3>
-                  </div>
-                  <div class="footer_blog2">
-                     <ul>
-                        <li><a href="index.html">> Home</a></li>
-                        <li><a href="adopt_gallery.html">> Dogs for Adopt</a></li>
-                        <li><a href="sale_gallery.html">> Dogs for Sale</a></li>
-                       <li><a href="privacy_policy.html">> Privacy Policy</a></li>
-                       <li><a href="terms_of _use.html">> Terms</a></li>
-                       <li><a href="about.html">> About Us</a></li>
-                        
-                     </ul>
+     <style>
+             /* 调整 footer 内边距 */
+             .footer {
+                 padding-top: 0px;   /* 上边距 */
+                 padding-bottom: 10px; /* 下边距 */
+             }
+     			  .footer_logo {
+     			              margin-top: 60px;  /* 调整此值来控制 logo 距离顶部的距离 */
+     			          }
+         </style>
+          <footer class="footer layout_padding">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-4 col-sm-12">
+                 <div class="footer_blog1">
+                    <div class="footer_logo"><a href="index.html"><img src="static/picture/logo_white.png" alt="#"></a></div>
                     
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-12">
-                  <div class="footer_link_heading">
-                     <h3>About PupsLover</h3>
-                  </div>
-                  <div class="address_infor">
-                     <p> 
-                        
-                        <span class="addrs">Discover your perfect pup at PupsLover! Explore a variety of dog breeds, puppies for sale, and adoption opportunities. 
-      						Find expert tips, connect with breeders, and bring home a furry friend today!</span>
-                     </p>
-                     
-                  </div>
-                  <div class="email_address_bottom">
-                     <form>
-                        <fieldset>
-                           <div class="field_email">
-                              <input type="email" name="email" placeholder="Email">
-                              <button><i class="fa fa-search"></i></button>
-                           </div>
-                        </fieldset>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
+                    <div class="footer_social_icon">
+                       <ul>
+                          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                 <div class="footer_link_heading">
+                    <h3>Useful Links</h3>
+                 </div>
+                 <div class="footer_blog2">
+                    <ul>
+                       <li><a href="index.html">> Home</a></li>
+                       <li><a href="adopt_gallery.html">> Dogs for Adopt</a></li>
+                       <li><a href="sale_gallery.html">> Dogs for Sale</a></li>
+                      <li><a href="privacy_policy.html">> Privacy Policy</a></li>
+                      <li><a href="terms_of _use.html">> Terms</a></li>
+                      <li><a href="about.html">> About Us</a></li>
+                       
+                    </ul>
+                   
+                 </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                 <div class="footer_link_heading">
+                    <h3>About PupsLover</h3>
+                 </div>
+                 <div class="address_infor">
+                    <p> 
+                       
+                       <span class="addrs">Discover your perfect pup at PupsLover! Explore a variety of dog breeds, puppies for sale, and adoption opportunities. 
+     						Find expert tips, connect with breeders, and bring home a furry friend today!</span>
+                    </p>
+                    
+                 </div>
+                 <div class="email_address_bottom">
+                    <form>
+                       <fieldset>
+                          <div class="field_email">
+                             <input type="email" name="email" placeholder="Email">
+                             <button><i class="fa fa-search"></i></button>
+                          </div>
+                       </fieldset>
+                    </form>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
       <!-- end footer -->
       <!-- copyright section -->
       <div class="copyright">
@@ -531,24 +614,30 @@
       <!-- end copyright section -->
       <div class="dmtop">Scroll to Top</div>
 	  
-	  // 显示点击read more
-	  <script>
-	      document.querySelector('.read-more').addEventListener('click', function (e) {
-	          e.preventDefault(); // 防止默认的链接跳转行为
-	          const textLine = document.querySelector('.text-line');
-	          const readMoreButton = document.querySelector('.read-more');
+	  <!-- 显示点击read more-- -->
+			<script>
+			    document.getElementById('toggle-button').addEventListener('click', function (e) {
+			        e.preventDefault();
+			        const textContent = document.getElementById('text-content');
+			        const toggleButton = document.getElementById('toggle-button');
+			
+			        // 切换文本的 max-height
+			        if (textContent.classList.contains('full-text')) {
+			            // 当前是展开状态，切换为收起
+			            textContent.style.maxHeight = '4.5em'; 
+			            textContent.classList.remove('full-text');
+			            toggleButton.textContent = 'Read More';
+			        } else {
+			            // 当前是收起状态，切换为展开
+			            textContent.style.maxHeight = 'none'; 
+			            textContent.classList.add('full-text');
+			            toggleButton.textContent = 'Read Less';
+			        }
+			    });
+			</script>
 	  
-	          // 切换文本显示状态
-	          textLine.classList.toggle('full-text');
+	 
 	  
-	          // 根据是否展开，修改按钮文本
-	          if (textLine.classList.contains('full-text')) {
-	              readMoreButton.textContent = 'Read Less'; // 显示 "Read Less"
-	          } else {
-	              readMoreButton.textContent = 'Read More'; // 显示 "Read More"
-	          }
-	      });
-	  </script>
       <!-- Core JavaScript
          ================================================== -->
       <script data-cfasync="false" src="static/js/email-decode.min.js"></script><script src="static/js/jquery.min.js"></script>
