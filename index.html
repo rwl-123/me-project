@@ -331,33 +331,51 @@
             </div>
 			
             <div class="row">
+				
+				
                   <div class="col-sm-3 margin_bottom_30">
-                     <a href="static/picture/f1.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-                     <img src="static/picture/f1.jpg" class="img-fluid" alt="#">
-                     </a>
+                    <a href="adopt_gallery.html" 
+                       data-gallery="example-gallery" 
+                       onclick="showImageAndRedirect(event, 'static/picture/ff1.jpg', 'adopt_gallery.html')">
+                      <img src="static/picture/f1.jpg" class="img-fluid" alt="#">
+                    </a>
                   </div>
-                  <div class="col-sm-3">
-                     <a href="static/picture/f2.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-                     <img src="static/picture/f2.jpg" class="img-fluid" alt="#">
-                     </a>
+                 
+                  
+				  
+				  
+				  
+				  
+                  <div class="col-sm-3 margin_bottom_30">
+                    <a href="adopt_gallery.html" 
+                       data-gallery="example-gallery" 
+                       onclick="showImageAndRedirect(event, 'static/picture/ff2.jpg', 'adopt_gallery.html')">
+                      <img src="static/picture/f2.jpg" class="img-fluid" alt="#">
+                    </a>
                   </div>
 				  
-				  <div class="col-sm-3">
-				     <a href="static/picture/f3.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-				     <img src="static/picture/f3.jpg" class="img-fluid" alt="#">
-				     </a>
+				  <div class="col-sm-3 margin_bottom_30">
+				    <a href="adopt_gallery.html" 
+				       data-gallery="example-gallery" 
+				       onclick="showImageAndRedirect(event, 'static/picture/ff3.jpg', 'adopt_gallery.html')">
+				      <img src="static/picture/f3.jpg" class="img-fluid" alt="#">
+				    </a>
 				  </div>
 				  
-				  <div class="col-sm-3">
-				     <a href="static/picture/f4.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-				     <img src="static/picture/f4.jpg" class="img-fluid" alt="#">
-				     </a>
+				  <div class="col-sm-3 margin_bottom_30">
+				    <a href="adopt_gallery.html" 
+				       data-gallery="example-gallery" 
+				       onclick="showImageAndRedirect(event, 'static/picture/ff4.jpg', 'adopt_gallery.html')">
+				      <img src="static/picture/f4.jpg" class="img-fluid" alt="#">
+				    </a>
 				  </div>
 				  
-				  <div class="col-sm-3">
-				     <a href="static/picture/f5.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-				     <img src="static/picture/f5.jpg" class="img-fluid" alt="#">
-				     </a>
+				  <div class="col-sm-3 margin_bottom_30">
+				    <a href="adopt_gallery.html" 
+				       data-gallery="example-gallery" 
+				       onclick="showImageAndRedirect(event, 'static/picture/ff5.jpg', 'adopt_gallery.html')">
+				      <img src="static/picture/f5.jpg" class="img-fluid" alt="#">
+				    </a>
 				  </div>
 				  
 				  <div class="col-sm-3">
@@ -483,6 +501,48 @@
       <script src="static/js/animate.js"></script>
       <script src="static/js/ekko-lightbox.js"></script>
       <script src="static/js/custom.js"></script>
+	 
+	 
+	 <!--Gallery部分的-->
+	 
+	 <script>
+	   function showImageAndRedirect(event, imageUrl, targetUrl) {
+	     // 阻止默认跳转行为
+	     event.preventDefault();
+	     
+	     // 创建一个显示大图的模态框
+	     const modal = document.createElement('div');
+	     modal.style.position = 'fixed';
+	     modal.style.top = '0';
+	     modal.style.left = '0';
+	     modal.style.width = '100%';
+	     modal.style.height = '100%';
+	     modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+	     modal.style.display = 'flex';
+	     modal.style.justifyContent = 'center';
+	     modal.style.alignItems = 'center';
+	     modal.style.zIndex = '1000';
+	 
+	     // 创建图片元素
+	     const image = document.createElement('img');
+	     image.src = imageUrl;
+	     image.style.maxWidth = '90%';
+	     image.style.maxHeight = '90%';
+	     image.style.border = '5px solid white';
+	     image.style.borderRadius = '8px';
+	     modal.appendChild(image);
+	 
+	     // 点击模态框时跳转到目标页面
+	     modal.onclick = () => {
+	       document.body.removeChild(modal); // 移除模态框
+	       window.location.href = targetUrl; // 跳转到目标页面
+	     };
+	 
+	     // 将模态框添加到页面
+	     document.body.appendChild(modal);
+	   }
+	 </script>
+	  <!--end Gallery部分的-->
 	 
 	  
    </body>
