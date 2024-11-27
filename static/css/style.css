@@ -4216,6 +4216,22 @@ form#commant_form div.field textarea.custom_field {
  </style>
  /* ！end  styles.css */
  
+ .dogbreed_name {
+     text-align: center;        /* 使文字在水平方向上居中 */
+     white-space: nowrap;       /* 禁止文本换行 */
+     overflow: hidden;          /* 隐藏超出容器的部分 */
+     text-overflow: ellipsis;   /* 如果文本溢出，显示省略号 */
+     font-size: 20px;           /* 设置字体大小（可以根据需要调整） */
+ }
  
+ .dogbreed_infotop {
+     width: 100%;
+     text-align: center;        /* 水平居中内容 */
+ }
  
- 
+ .dogbreedinfo {
+     border: solid #111428 1px;
+     padding: 8px 0px 0px 0px;
+     width: 100%;
+     text-align: center;        /* 确保内容在父容器中居中 */
+ }
