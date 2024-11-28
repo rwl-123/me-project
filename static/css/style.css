@@ -4217,21 +4217,30 @@ form#commant_form div.field textarea.custom_field {
  /* ！end  styles.css */
  
  .dogbreed_name {
-     text-align: center;        /* 使文字在水平方向上居中 */
-     white-space: nowrap;       /* 禁止文本换行 */
-     overflow: hidden;          /* 隐藏超出容器的部分 */
-     text-overflow: ellipsis;   /* 如果文本溢出，显示省略号 */
-     font-size: 20px;           /* 设置字体大小（可以根据需要调整） */
- }
- 
+    font-size: 1.25rem; /* 使用 rem 单位 */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .dogbreed_name {
+        font-size: 1.5rem; /* 在移动端调整字体大小 */
+		text-align: center;
+    }
+}
  .dogbreed_infotop {
      width: 100%;
-     text-align: center;        /* 水平居中内容 */
+     text-align: center;
+     padding: 0; /* 移除任何不必要的内边距 */
+     margin: 0;  /* 移除任何不必要的外边距 */
  }
  
  .dogbreedinfo {
      border: solid #111428 1px;
      padding: 8px 0px 0px 0px;
      width: 100%;
-     text-align: center;        /* 确保内容在父容器中居中 */
+     text-align: center;
+     box-sizing: border-box; /* 确保内边距不会影响宽度 */
  }
