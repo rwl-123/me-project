@@ -4244,3 +4244,18 @@ form#commant_form div.field textarea.custom_field {
      text-align: center;
      box-sizing: border-box; /* 确保内边距不会影响宽度 */
  }
+ 
+/* 通过负的 margin-top 来将标题整体上移 */
+.move-up {
+  margin-top: -60px; /* 调整值可以根据需求增加或减少 */
+}
+
+/* 减小标题与宠物信息之间的间距 */
+.layout_padding .pets_information_section .heading_s2 {
+  margin-bottom: 20px;  /* 将原来的margin-bottom减少，默认可能是50px，调整为更小的20px */
+}
+
+/* 调整宠物信息部分与标题之间的距离 */
+#pet-info-container {
+  margin-top: -60px;  /* 如果需要，可以增加上边距，让宠物信息块靠近标题 */
+}
