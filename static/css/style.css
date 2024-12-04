@@ -4259,3 +4259,10 @@ form#commant_form div.field textarea.custom_field {
 #pet-info-container {
   margin-top: -60px;  /* 如果需要，可以增加上边距，让宠物信息块靠近标题 */
 }
+
+
+.pagination .active {
+   background-color: #007bff; /* 设置背景色 */
+   color: white;              /* 设置文字颜色 */
+   border-radius: 5px;        /* 设置圆角 */
+}
